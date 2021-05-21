@@ -8,13 +8,13 @@ It's sometimes tricky to get the files right.
 Basically, to create a container you need.
 ------------------------------------------------------------
 1) Docker Desktop
-- Docker Desktop Installer.exe -> https://www.docker.com/products/docker-desktop
+-- Docker Desktop Installer.exe -> https://www.docker.com/products/docker-desktop
 
 2) Docker Compose File
-- docker-compose.yml
+-- docker-compose.yml
 
 3) Dockerfile File
-- Dockerfile
+-- Dockerfile
 
 4) A bunch of other files, dependencies, commands and patience.
 ------------------------------------------------------------

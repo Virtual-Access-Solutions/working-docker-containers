@@ -1,0 +1,132 @@
+docker build --tag node-docker .
+
+docker tag node-docker:latest node-docker:v1.0.0
+docker rmi node-docker:v1.0.0
+
+docker images
+
+docker run node-docker
+
+docker run --publish 8000:8000 node-docker
+
+docker run -d -p 8000:8000 node-docker
+
+docker ps
+
+docker stop <<<container_name>>>
+
+docker restart <<<container_name>>>
+
+docker stop <<<container_name>>>
+
+docker rm <<<container_name>>> <<<container_name2>>> <<<container_name3>>>
+
+docker run -d -p 8000:8000 --name rest-server node-docker
+
+$ docker volume create mongodb
+$ docker volume create mongodb_config
+
+docker network create mongodb
+
+$ docker run -it --rm -d -v mongodb:/data/db \
+  -v mongodb_config:/data/configdb -p 27017:27017 \
+  --network mongodb \
+  --name mongodb \
+  mongo
+
+
+const ronin     = require( 'ronin-server' )
+const mocks     = require( 'ronin-mocks' )
+const database  = require( 'ronin-database' )
+const server = ronin.server()
+
+database.connect( process.env.CONNECTIONSTRING )
+server.use( '/', mocks.server( server.Router(), false, false ) )
+server.start()
+
+npm install ronin-database
+
+docker build --tag node-docker .
+
+$ docker run \
+  -it --rm -d \
+  --network mongodb \
+  --name rest-server \
+  -p 8000:8000 \
+  -e CONNECTIONSTRING=mongodb://mongodb:27017/yoda_notes \
+  node-docker
+
+  $ curl --request POST \
+  --url http://localhost:8000/notes \
+  --header 'content-type: application/json' \
+  --data '{
+"name": "this is a note",
+"text": "this is a note that I wanted to take while I was working on writing a blog post.",
+"owner": "peter"
+}'
+
+
+{"code":"success","payload":{"_id":"5efd0a1552cd422b59d4f994","name":"this is a note","text":"this is a note that I wanted to take while I was working on writing a blog post.","owner":"peter","createDate":"2020-07-01T22:11:33.256Z"}}
+
+
+ server.use( '/foo', (req, res) => {
+   return res.json({ "foo": "bar" })
+ })
+
+npm install nodemon
+
+
+docker-compose -f docker-compose.dev.yml up --build
+
+{"code":"success","meta":{"total":0,"count":0},"payload":[]}
+
+mkdir -p test
+
+
+
+docker-compose -f docker-compose.dev.yml up --build
+
+$ curl --request POST \
+  --url http://localhost:8000/test \
+  --header 'content-type: application/json' \
+  --data '{
+	"msg": "testing"
+}'
+
+$ curl http://localhost:8000/test
+
+{"code":"success","payload":[{"msg":"testing","id":"e88acedb-203d-4a7d-8269-1df6c1377512","createDate":"2020-10-11T23:21:16.378Z"}]}
+Install Mocha
+Run the following command to install Mocha and add it to the developer dependencies:
+
+$ npm install --save-dev mocha
+Update package.json and Dockerfile to run tests
+Okay, now that we know our application is running properly, let’s try and run our tests inside of the container. We’ll use the same docker run command we used above but this time, we’ll override the CMD that is inside of our container with npm run test. This will invoke the command that is in the package.json file under the “script” section. See below.
+
+{
+...
+  "scripts": {
+    "test": "mocha ./**/*.js",
+    "start": "nodemon --inspect=0.0.0.0:9229 server.js"
+  },
+...
+}
+
+
+$ curl http://localhost:8000/test
+
+{"code":"success","payload":[{"msg":"testing","id":"e88acedb-203d-4a7d-8269-1df6c1377512","createDate":"2020-10-11T23:21:16.378Z"}]}
+
+npm install --save-dev mocha
+
+docker-compose -f docker-compose.dev.yml run notes npm run test
+
+
+
+
+
+
+
+
+
+

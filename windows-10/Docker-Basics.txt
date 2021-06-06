@@ -1,0 +1,44 @@
+#source->https://docs.docker.com/docker-for-windows/
+
+docker-compose migrate-to-labels
+
+docker container rm -f -v myapp_web_1 myapp_db_1 ...
+
+#Check Docker Version
+docker version
+
+#To uninstall Docker Compose if you installed using curl:
+sudo rm /usr/local/bin/docker-compose
+
+#To uninstall Docker Compose if you installed using pip:
+pip uninstall docker-compose
+
+#Install Docker Desktop Installer.exe
+
+#Start Docker Desktop
+
+#Update Docker Desktop (if necessary)
+
+#Restart Docker Desktop and Reset to factory defaults
+
+
+https://docs.docker.com/compose/reference/envvars/
+
+
+
+#To uninstall Docker Compose if you installed using curl:
+sudo rm /usr/local/bin/docker-compose
+
+#To uninstall Docker Compose if you installed using pip:
+pip uninstall docker-compose
+
+
+
+
+
+
+
+
+
+
+

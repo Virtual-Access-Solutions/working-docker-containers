@@ -1,0 +1,41 @@
+cd /Sites/Virtual-Access-Solutions/working-docker-containers/windows-10/_need-testing/development-stacks/
+
+npm install -g @vue/cli
+
+vue create myapp
+
+(select Vue 3)
+(runs automatically->
+cd myapp
+npm run serve
+)
+
+npm run serve -- --port 5000
+
+or create config file with ->
+----------------------------------------------------------------
+module.exports = {
+    devServer: {
+      port: 5000
+    }
+  }
+----------------------------------------------------------------
+
+docker build -t myapp .
+
+docker run -it -v "${PWD}":/usr/src/app -v /usr/src/app/node_modules -p 5000:5000 myapp
+(if on linux/mac)
+
+docker run -it -v %cd%:/usr/src/app -v /usr/src/app/node_modules -p 5000:5000 myapp
+(if on windows)
+
+"ERROR Error: Cannot find module 'vue-loader-v16/package.json'"
+
+npm install npm@latest -g
+
+
+
+docker: Error response from daemon: create ${PWD}: "${PWD}" includes invalid characters for a local volume name, only "[a-zA-Z0-9][a-zA-Z0-9_.-]" are allowed. If you intended to pass a host directory, use absolute path.
+See 'docker run --help'.
+
+http://localhost:5000/.

@@ -1,0 +1,10 @@
+#source->https://hub.docker.com/_/httpd
+web:
+  image: httpd:2.4
+  volumes:
+   - #./templates:/etc/apache/templates
+  ports:
+   - "8080:80"
+  environment:
+   - NGINX_HOST=foobar.com
+   - NGINX_PORT=80

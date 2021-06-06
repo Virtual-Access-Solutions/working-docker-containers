@@ -1,0 +1,18 @@
+#source->https://docs.docker.com/compose/
+
+#Run
+----------------------------------------
+docker-compose up
+----------------------------------------
+
+#Automated testing environments
+----------------------------------------
+$ docker-compose up -d
+$ ./run_tests
+$ docker-compose down
+----------------------------------------
+
+
+
+
+

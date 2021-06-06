@@ -1,0 +1,6 @@
+> source->https://hub.docker.com/_/mongo-express
+> docker-compose up -d
+----------------------------------------
+
+----------------------------------------
+> docker-compose down

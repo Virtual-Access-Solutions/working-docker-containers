@@ -1,0 +1,23 @@
+#Add line
+"debug": "nodemon --inspect=0.0.0.0:9229 server.js"
+
+
+#Add line
+{
+    ...
+      "scripts": {
+        "test": "mocha ./**/*.js",
+        "start": "nodemon --inspect=0.0.0.0:9229 server.js"
+      },
+    ...
+    }
+
+#Add line
+{
+    ...
+      "scripts": {
+        "test": "mocha ./**/*.js",
+        "start": "nodemon --inspect=0.0.0.0:9229 server.js"
+      },
+    ...
+    }

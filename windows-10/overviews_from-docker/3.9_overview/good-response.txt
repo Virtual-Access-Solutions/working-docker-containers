@@ -1,0 +1,27 @@
+> docker-compose up -d
+----------------------------------------
+Docker Compose is now in the Docker CLI, try `docker compose up`
+
+Creating network "39_overview_default" with the default driver
+Creating volume "39_overview_logvolume01" with default driver
+Pulling redis (redis:)...
+latest: Pulling from library/redis
+69692152171a: Already exists
+a4a46f2fd7e0: Pull complete
+bcdf6fddc3bd: Pull complete
+b7e9b50900cc: Pull complete
+5f3030c50d85: Pull complete
+63dae8e0776c: Pull complete
+Digest: sha256:365eddf64356169aa0cbfbeaf928eb80762de3cc364402e7653532bcec912973
+Status: Downloaded newer image for redis:latest
+Building web
+failed to get console mode for stdout: The handle is invalid.
+[+] Building 0.0s (0/1)
+failed to solve with frontend dockerfile.v0: failed to read dockerfile: open /var/lib/docker/tmp/bui[+] Building 0.1s (2/2) FINISHED
+ => [internal] load build definition from Dockerfile                       0.1s 
+ => => transferring dockerfile: 2B                                         0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ERROR: Service 'web' failed to build
+----------------------------------------
+> docker-compose down

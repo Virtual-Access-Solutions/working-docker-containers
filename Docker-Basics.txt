@@ -1,0 +1,46 @@
+#source->https://docs.docker.com/docker-for-windows/
+
+# Steps To Use Docker
+
+    #) Install Docker Desktop Installer.exe
+
+    #) Start Docker Desktop
+        #) Update Docker Desktop (if necessary)
+        #) Restart Docker Desktop and Reset to factory defaults
+
+Common Commands:
+    #Check Docker Version
+    > docker version
+
+    > docker image ls
+    > docker image rm <image>
+    > docker image rm -f <image>
+    > docker image prune
+
+    > docker container ls
+    > docker container rm <container>
+    > docker container rm -v <container>
+    > docker container rm -f <container>
+    > docker container rm -l <container>
+
+Other Commands:
+    > docker-compose migrate-to-labels
+
+    #To uninstall Docker Compose if you installed using curl:
+    > sudo rm /usr/local/bin/docker-compose
+
+    #To uninstall Docker Compose if you installed using pip:
+    > pip uninstall docker-compose
+
+https://docs.docker.com/compose/reference/envvars/
+
+
+
+
+
+
+
+
+
+
+
